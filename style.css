@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    display: flex; /*Brigning the item to the center horizontally*/
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+.btn {
+    background-color: pink;
+    padding: 20px 40px; /*Top & Bottom Left & RIght*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    text-decoration: none; /*remove underline*/
+    color: black;
+    position: relative;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
