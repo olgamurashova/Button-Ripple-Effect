@@ -16,18 +16,26 @@ body {
     text-decoration: none; /*remove underline*/
     color: black;
     position: relative;
+    overflow: hidden;
 }
 
-.btn:before {
+.btn::before {
     content: "";
     position: absolute;
     background-color: orangered;
-    width: 20px;
-    height: 20px;
+    width: 0;
+    height: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
 
 }
 
+
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+  }
